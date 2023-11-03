@@ -597,7 +597,7 @@ footer{
 }
 
 .splide__track {
-    height: 30vw;
+    height: 30vw !important;
     margin-top: 5%;
 }
 
