@@ -1,71 +1,81 @@
-// Selecione o elemento '.merchandising'
 var merchandising = document.querySelector('.merchandising');
 
-// Defina a posição inicial e a velocidade da animação
 var position = -27;
 var speed = 0.05;
 
-// Crie uma função para atualizar a posição do elemento
 function updatePosition() {
-  // Atualize a posição
   position += speed;
-  
-  // Se a posição chegar ao final do intervalo, reinicie-a
+
   if (position > 27) {
-    position = -26; // Mova a posição de volta para o início do intervalo
+    position = -26;
   }
   
-  // Atualize a transformação do elemento
   merchandising.style.transform = 'translateX(' + position + 'vw)';
-  
-  // Solicite o próximo quadro de animação
   requestAnimationFrame(updatePosition);
 }
-
-// Inicie a animação
 requestAnimationFrame(updatePosition);
 
-let index = 3;
-  const cards = document.querySelectorAll('.cards');
-  const c1 = document.querySelector('.c1')
-  const percentages = [51, 25.5, 0, -25.5, -51];
+// document.addEventListener( 'DOMContentLoaded', function () {
+//   var splide = new Splide( '#thumbnail-slider', {
+//     fixedWidth : 480,
+//     fixedHeight: 530,
+//     type: 'loop',
+//     gap        : 5,
+//     rewind     : true,
+//     pagination : false,
+//     cover      : true,
+//     focus      : 'center',
+//     isNavigation: true,
+//     autoplay: 'playing',
+//     pauseOnHover: false,
+//     lazyload: 'loaded'
+//   } 
+//   ).mount();
 
-  function updateCards() {
-    // Remove a classe 'selected' do card atualmente selecionado
-    cards.forEach(card => card.classList.remove('selected'));
+//   splide.on( 'autoplay:playing', function ( rate ) {
+//     console.log( rate );
+//   } );
 
-    // Atualiza a transformação de cada card
-    cards.forEach((card, i) => {
-      c1.style.transform = `translateX(${percentages[(index + i) % 5]}%)`;
-    });
+//   document.querySelector('.splide__arrow--next').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>';
 
-    // Adiciona a classe 'selected' ao novo card selecionado
-    cards[index-1].classList.add('selected');
-  }
+//   document.querySelector('.splide__arrow--prev').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>';
 
-  document.getElementById('right').addEventListener('click', () => {
-    index = (index % 5) + 1;
-    updateCards();
-  });
+//    var urls = ['https://fatecitapetininga.edu.br/', 'https://fatecitapetininga.edu.br/', 'https://fatecitapetininga.edu.br/', 'https://fatecitapetininga.edu.br/', 'https://fatecitapetininga.edu.br/'];
 
-  document.getElementById('left').addEventListener('click', () => {
-    index = ((index - 2 + 5) % 5) + 1;
-    updateCards();
-  });
+//    var slides = document.querySelectorAll('.splide__slide');
+//    slides.forEach(function(slide, index) {
+//      slide.addEventListener('click', function() {
+//        if (slide.classList.contains('is-active')) {
+//          window.location.href = urls[index]; // Use o índice para acessar o URL correspondente
+//        }
+//      });
+//    });
+// })
 
-  // Adiciona uma animação automática que avança o carrossel a cada 3 segundos
-  setInterval(() => {
-    index = (index % 5) + 1;
-    updateCards();
-  }, 5000);
+document.addEventListener( 'DOMContentLoaded', function () {
+  var splide = new Splide( '#thumbnail-slider', {
+    fixedWidth : 480,
+    fixedHeight: 530,
+    type: 'loop',
+    gap        : 5,
+    rewind     : true,
+    pagination : false,
+    cover      : true,
+    focus      : 'center',
+    isNavigation: true,
+    autoplay: 'playing',
+    pauseOnHover: false,
+    lazyload: 'loaded'
+  } 
+  ).mount();
 
-  updateCards();
+  splide.on( 'autoplay:playing', function ( rate ) {
+    console.log( rate ); // 0-1
+  } );
 
+  document.querySelector('.splide__arrow--next').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>';
 
-
-
-
-
-
+  document.querySelector('.splide__arrow--prev').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>';
+})
 
 
