@@ -597,7 +597,7 @@ footer{
 }
 
 .splide__track {
-    height: 80vh !important;
+    height: 60vh !important;
     margin-top: 5%;
 }
 
@@ -725,6 +725,11 @@ footer{
 
     .splide__arrow {
         top: 75% !important;
+    }
+
+    .splide__track {
+        height: 80vh !important;
+        margin-top: 5%;
     }
 
     footer{
