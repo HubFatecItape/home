@@ -546,6 +546,11 @@
         font-size: 1.5em;
     }
 
+    #contato a {
+        text-decoration: none;
+        color: #803ED6;
+    }
+
     #stroke1{
         position: absolute;
         background-color: #000;
