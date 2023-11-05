@@ -16,7 +16,7 @@ function updatePosition() {
 requestAnimationFrame(updatePosition);
 
 document.addEventListener( 'DOMContentLoaded', function () {
-  var splide = new Splide( '#thumbnail-slider', {
+  var splide1 = new Splide( '#thumbnail-slider', {
     fixedWidth : 480,
     fixedHeight: 530,
     type: 'loop',
@@ -33,13 +33,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
       800: {
           // configurações para telas menores que 600px
           perPage: 3,
-          arrows: false,
+          autoWidth: true,
+          lazyload: false,
       }
   }
   } 
   ).mount();
 
-  splide.on( 'autoplay:playing', function ( rate ) {
+  splide1.on( 'autoplay:playing', function ( rate ) {
     console.log( rate ); // 0-1
   } );
 
@@ -47,3 +48,23 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
   document.querySelector('.splide__arrow--prev').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>';
 })
+
+
+let index1 = 0;
+const flexCard = document.querySelector('.flexCard');
+const percentages = [104, 0, -104];
+
+function updateCards() {
+  if (window.innerWidth <= 800) {
+    flexCard.style.transform = `translateX(${percentages[index1]}vw)`;
+    index1 = (index1 + 1) % 3; // Atualiza o índice para o próximo ciclo
+  }
+}
+
+updateCards(); // Chama a função uma vez para iniciar
+
+setInterval(updateCards, 3000); // Atualiza os cartões a cada 3 segundos
+
+
+
+  
