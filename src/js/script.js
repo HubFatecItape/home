@@ -65,6 +65,47 @@ updateCards(); // Chama a função uma vez para iniciar
 
 setInterval(updateCards, 3000); // Atualiza os cartões a cada 3 segundos
 
+window.onload = function() {
+  var alunos = Array.from(document.querySelectorAll('.geralAlunos'));
+  var selectors = document.getElementById('selectors');
+  var currentIndex = 0;
+
+  // Crie os seletores de slides
+  alunos.forEach(function(aluno, index) {
+    var selector = document.createElement('div');
+    selector.classList.add('selector');
+    selector.addEventListener('click', function() {
+      currentIndex = index;
+      changeAluno();
+    });
+    selectors.appendChild(selector);
+  });
+
+  function changeAluno() {
+    alunos.forEach(function(aluno, index) {
+      if (index === currentIndex) {
+        aluno.classList.add('active');
+        selectors.children[index].classList.add('active');
+      } else {
+        aluno.classList.remove('active');
+        selectors.children[index].classList.remove('active');
+      }
+    });
+  }
+
+  changeAluno();
+
+  setInterval(function() {
+    currentIndex = (currentIndex + 1) % alunos.length;
+    changeAluno();
+  }, 5000);
+};
+
+
+
+
+
+
 
 
   
