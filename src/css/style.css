@@ -495,9 +495,6 @@
         font-weight: 400;
         line-height: 26px;
     }
-    .card a {
-        text-decoration: none;
-    }
 
     .radial {
         position: absolute;
