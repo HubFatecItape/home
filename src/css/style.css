@@ -25,6 +25,12 @@
         align-self: flex-end;
     }
 
+    a.acessarCurriculos{
+        text-decoration: none;
+        padding: 20px;
+        align-self: flex-end;
+    }
+
     ::-webkit-scrollbar {
         width: 5px;
         background: none;
@@ -37,7 +43,7 @@
     }
 
     nav img{
-        width: 100px;
+        width: 250px;
     }
 
     body {
@@ -1251,6 +1257,7 @@
             position: relative;
             height: 100vh;
             overflow: visible;
+            
         }
         
         #foto div:nth-child(1) {
@@ -1389,6 +1396,12 @@
     }
 }
 
+@media(max-width: 400px){
+    #foto {
+        height: 135vh;    
+    }
+}
+
 .egressos{
     width: 100vw;
     height: 70vh;
@@ -1499,13 +1512,32 @@
     height: 6vh;
     border-radius: 100px;
     font-weight: 500;
-    color: #fff;
+    color: #ffffff;
     border: 2px solid #803ED6;
     transition: scale .15s linear;
     cursor: pointer;
 }
 
 .verMaisEgressos:hover{
+    scale: 1.2;
+}
+
+.acessarCurriculos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 10vw;
+    height: 6vh;
+    border-radius: 100px;
+    font-weight: 700;
+    color: #803ED6;
+    border: 2px solid #803ED6;
+    transition: scale .15s linear;
+    cursor: pointer;
+}
+
+.acessarCurriculos:hover{
     scale: 1.2;
 }
 
