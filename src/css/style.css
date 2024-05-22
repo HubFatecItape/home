@@ -36,8 +36,8 @@
         background: linear-gradient(0deg, #1CDD71 0%, #803ED6 100%);
     }
 
-    nav h1{
-        font-weight: 900;
+    nav img{
+        width: 100px;
     }
 
     body {
