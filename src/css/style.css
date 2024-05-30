@@ -25,10 +25,48 @@
         align-self: flex-end;
     }
 
+    .verMaisEgressos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #803ED6;
+        width: 11vw;
+        height: 6vh;
+        border-radius: 100px;
+        font-weight: 500;
+        color: #ffffff;
+        border: 2px solid #803ED6;
+        transition: scale .15s linear;
+        cursor: pointer;
+    }
+    
+    .verMaisEgressos:hover{
+        scale: 1.2;
+    }
+
     a.acessarCurriculos{
         text-decoration: none;
         padding: 20px;
         align-self: flex-end;
+    }
+    
+    .acessarCurriculos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        width: 8vw;
+        height: 6vh;
+        border-radius: 100px;
+        font-weight: 700;
+        color: #803ED6;
+        border: 2px solid #803ED6;
+        transition: scale .15s linear;
+        cursor: pointer;
+    }
+    
+    .acessarCurriculos:hover{
+        scale: 1.2;
     }
 
     ::-webkit-scrollbar {
@@ -1095,10 +1133,14 @@
             font-family: 'Inter', sans-serif;
             font-style: normal;
             font-weight: 300;
+        } 
+
+        .acessarCurriculos{
+            width: 100px;
         }
     }
 
-    @media(max-width: 800px) {
+    @media(max-width: 860px) {
 
         * {
             overflow-x: hidden;
@@ -1394,11 +1436,23 @@
         width: 80vw !important;
         height: 50vh !important;
     }
+
+    .verMaisEgressos{
+        width: 150px;
+    }
+
+    nav img{
+        width: 200px;
+    }
 }
 
 @media(max-width: 400px){
     #foto {
         height: 135vh;    
+    }
+
+    nav img{
+        width: 150px;
     }
 }
 
@@ -1503,43 +1557,7 @@
 
 }
 
-.verMaisEgressos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #803ED6;
-    width: 10vw;
-    height: 6vh;
-    border-radius: 100px;
-    font-weight: 500;
-    color: #ffffff;
-    border: 2px solid #803ED6;
-    transition: scale .15s linear;
-    cursor: pointer;
-}
 
-.verMaisEgressos:hover{
-    scale: 1.2;
-}
-
-.acessarCurriculos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    width: 10vw;
-    height: 6vh;
-    border-radius: 100px;
-    font-weight: 700;
-    color: #803ED6;
-    border: 2px solid #803ED6;
-    transition: scale .15s linear;
-    cursor: pointer;
-}
-
-.acessarCurriculos:hover{
-    scale: 1.2;
-}
 
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
     border: none !important;
