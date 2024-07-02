@@ -1578,3 +1578,32 @@
 .dropdown-item:focus, .dropdown-item:hover {
     background-color: #c0c0c0 !important;
 }
+
+
+.alunos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.alunos img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.descricao {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.descricao h2,
+.descricao h3 {
+    margin: 0;
+}
+
+.descricao p {
+    margin-top: 10px;
+}
