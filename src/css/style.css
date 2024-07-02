@@ -1053,7 +1053,7 @@
             position: relative;
             visibility: visible;
             width: 70vw !important;
-            height: 40vh;
+            height: 30vh;
             display: flex;
             flex-direction: row;
             opacity: 1;
@@ -1503,7 +1503,7 @@
     position: relative;
     visibility: visible;
     width: 50vw;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     opacity: 1;
