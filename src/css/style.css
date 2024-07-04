@@ -266,15 +266,11 @@
     }
 
     #emp {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
-        padding-top: 50px;
-        text-align: center;
-        justify-content: center;
-    }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ajuste conforme necessário */
+        }
 
     #mac {
         margin-top: 200px;
