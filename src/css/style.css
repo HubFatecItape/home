@@ -154,6 +154,7 @@
     /**/
     nav{
         position: relative;
+        
     }
 
     #menu {
@@ -172,11 +173,12 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        bottom: -100px;
+        top: 70px;
         background-color: white;
-        padding: 5px;
+        padding: 10px;
         border: 0.3px solid rgba(0, 0, 0, 0.193);
         border-radius: 5px;
+        min-width: 80px;
     }
 
     .bgMenu{
