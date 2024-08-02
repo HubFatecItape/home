@@ -152,6 +152,9 @@
     }
 
     /**/
+    nav{
+        position: relative;
+    }
 
     #menu {
         display: flex;
@@ -159,33 +162,44 @@
         align-items: left;
         justify-content: center;
         gap: 4px;
-        width: 20px;
-        height: 18px;
     }
 
-    #menu1 {
-        width: 100%;
-        background-color: #000;
-        height: 2px;
+    .menu{
+        width: 30px;
     }
 
-    #menu2 {
-        width: 80%;
-        background-color: #000;
-        height: 2px;
-    }
-
-    #menu3 {
-        width: 90%;
-        background-color: #000;
-        height: 2px;
-    }
-
-    #hamburg {
+    .itensMenu{
+        position: absolute;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        bottom: -100px;
+        background-color: white;
+        padding: 5px;
+        border: 0.3px solid rgba(0, 0, 0, 0.193);
+        border-radius: 5px;
     }
 
+    .bgMenu{
+        border: 0.5px solid rgba(128, 128, 128, 0.445);
+        color: white;
+        border-radius: 5px;
+    }
+
+    .itensMenu a{
+        text-decoration: none;
+        color: #000;
+        border-radius: 3px;
+        padding: 3px;
+    }
+
+    .itensMenu a:hover{
+        background-color: #0000005a;
+        color: white;
+    }
+
+    .hide{
+        display: none;
+    }
     #cont {
         display: flex;
         padding-left: 20vw;
@@ -1159,6 +1173,9 @@
             overflow-x: hidden;
         }
 
+        nav{
+            overflow-x: visible;
+        }
         #projetos, .splide, .splide__list, .splide__slide{
             overflow-x: visible;
         }
@@ -1572,16 +1589,9 @@
 
 }
 
-
-
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
     border: none !important;
 }
-
-.dropdown-item:focus, .dropdown-item:hover {
-    background-color: #c0c0c0 !important;
-}
-
 
 .alunos {
     display: flex;
