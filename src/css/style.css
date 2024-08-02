@@ -287,7 +287,7 @@
         overflow: hidden;
         padding-top: 50px;
         text-align: center;
-    }
+       }
 
     #mac {
         margin-top: 200px;
@@ -1586,6 +1586,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 11px;
 
 }
 
