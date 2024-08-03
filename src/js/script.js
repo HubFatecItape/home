@@ -98,12 +98,6 @@ window.onload = function() {
   }, 5000);
 };
 
-const itensMenu = document.querySelector('.itensMenu')
-const menu = document.querySelector('.menu')
-menu.addEventListener('click',()=>{
-  itensMenu.classList.toggle('hide')
-  menu.classList.toggle('bgMenu')
-})
 
 
 
