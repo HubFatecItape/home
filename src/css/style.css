@@ -585,7 +585,8 @@
 
     #projetos {
         width: 100vw;
-        height: 80vh;
+        max-height: 1500px;
+        height: 150vh;
         display: flex;
         flex-direction: column;
         background: #0C001C;
@@ -598,7 +599,6 @@
     }
 
     #projetos {
-        height: 110vh;
         justify-content: center;
         display: flex;
         padding-bottom: 10%; 
@@ -828,7 +828,7 @@
         top: 0;
         left: 0;
         right: 0;
-        width: 100% !important;
+        width: 100%!important;
         height: 100%;
         background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0) 100%);
         z-index: 0;
@@ -970,6 +970,7 @@
 
         .splide__track {
             height: 80vh !important;
+            max-height: 500px;
             margin-top: 5%;
         }
 
@@ -1156,12 +1157,17 @@
             font-style: normal;
             font-weight: 300;
         } 
+
     }
 
     @media(max-width: 860px) {
 
         * {
             overflow-x: hidden;
+        }
+
+        .splide__slide::before {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 30%, rgba(0,0,0,0) 100%);
         }
 
         nav{
@@ -1172,7 +1178,7 @@
         }
 
         #projetos {
-            height: 100vh;
+            height: 150vh;
             padding-bottom: 50%;
             gap: 10px;
         }
@@ -1320,7 +1326,6 @@
             flex-wrap: wrap-reverse;
             position: relative;
             height: 100vh;
-            min
             overflow: visible;
             
         }
@@ -1386,8 +1391,16 @@
         overflow-x: visible;
     }
 
+    .splide__slide {
+        width: 60vw;
+        height: 60vh;
+        max-width: 380px !important;
+        max-height: 430px !important;
+    }
+
     .splide__slide:hover {
-        height: 530px;
+        height: 70vh;
+        max-height: 530px;
     }
 
     footer {
